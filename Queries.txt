@@ -1,0 +1,70 @@
+```graphql
+mutation {
+  addModuleToCourse(input: { 
+    courseTitle: "Introduction to GraphQL", 
+    moduleTitle: "Getting Started" 
+  }) {
+    course {
+      id
+      title
+      modules {
+        id
+        title
+        status
+      }
+    }
+    errors {
+      message
+      code
+    }
+  }
+}
+```
+
+### Query Courses with Modules
+
+```graphql
+query {
+  courses {
+    id
+    title
+    modules {
+      id
+      title
+      status
+      estimatedHours
+      hoursSpent
+    }
+    students {
+      id
+      fullName
+      email
+    }
+  }
+}
+```
+
+### Enroll Student
+
+```graphql
+mutation {
+  enrollStudent(input: {
+    courseTitle: "Introduction to GraphQL",
+    studentFullName: "John Doe",
+    studentEmail: "john.doe@example.com"
+  }) {
+    course {
+      id
+      title
+      students {
+        id
+        fullName
+        email
+      }
+    }
+    errors {
+      message
+      code
+    }
+  }
+}

@@ -7,4 +7,23 @@
     <RootNamespace>dotnetcore_graphql</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+ 
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HotChocolate.AspNetCore" Version="15.1.7" />
+    <PackageReference Include="HotChocolate.Data" Version="15.1.6" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="15.1.6" />
+    <PackageReference Include="HotChocolate.Types.Filters" Version="13.9.14" />
+    <PackageReference Include="HotChocolate.Types.Sorting" Version="13.9.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.6" />
+  </ItemGroup>
+
 </Project>
