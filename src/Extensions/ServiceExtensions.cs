@@ -27,7 +27,7 @@ namespace dotnetcore_graphql.src.Extensions
               .AddMutationType(d => d.Name("Mutation"))
               .AddTypeExtension<CourseMutations>()
               .AddInMemorySubscriptions()
-              .AddSubscriptionType(d => d.Name("CourseModule"))
+              .AddSubscriptionType(d => d.Name("Subscription"))
               .AddTypeExtension<CourseModuleSubscription>();
 
         }

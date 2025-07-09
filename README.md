@@ -124,11 +124,6 @@ Navigate to `https://localhost:5001/graphql` to access the GraphQL playground an
 - **Filtering and Sorting** capabilities
 - **Real-time Subscriptions** for live updates
 
-### Error Handling
-
-- Structured error responses with error codes
-- Business rule validation
-- Proper exception handling and logging
 
 
 ## 📝 Database Schema

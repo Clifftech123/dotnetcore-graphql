@@ -11,7 +11,7 @@ namespace dotnetcore_graphql.src.Domain.Contracts
             Course = course;
         }
 
-        protected CoursePayloadBase(IReadOnlyList<UserError> errors)
+        protected  CoursePayloadBase(IReadOnlyList<UserError> errors)
             : base(errors)
         {
         }

@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using dotnetcore_graphql.src.Domain.Contracts;
 using dotnetcore_graphql.src.Domain.Model;
@@ -13,9 +12,9 @@ namespace dotnetcore_graphql.src.GraphqlApi.Mutations
     [ExtendObjectType("Mutation")]
     public class CourseMutations
     {
-        public static async Task<CreateCoursePayload> CreateCourse(
+        public  async Task<CreateCoursePayload> CreateCourse(
             CreateCourseInput input, 
-             [FromServices] ApplicationDbContext dbContext)
+            [FromServices] ApplicationDbContext dbContext)
         {
             try
             {
@@ -45,7 +44,8 @@ namespace dotnetcore_graphql.src.GraphqlApi.Mutations
 
         public static async Task<AddModulePayload> AddModuleToCourse(
             AddModuleToCourseInput input,
-            [FromServices] ApplicationDbContext dbContext,  ITopicEventSender eventSender)
+            [FromServices] ApplicationDbContext dbContext,  
+            [FromServices] ITopicEventSender eventSender) 
         {
             try
             {
@@ -85,7 +85,7 @@ namespace dotnetcore_graphql.src.GraphqlApi.Mutations
 
         public static async Task<EnrollStudentPayload> EnrollStudent(
             EnrollStudentInput input,
-             [FromServices] ApplicationDbContext dbContext)
+            [FromServices] ApplicationDbContext dbContext)
         {
             try
             {

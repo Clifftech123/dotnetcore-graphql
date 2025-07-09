@@ -16,7 +16,7 @@ namespace dotnetcore_graphql.src.GraphqlApi
         [Subscribe]
         [Topic]
 
-        public Task<CourseModule> OnCourseModuleAdded([EventMessage] Guid id, [FromServices] ApplicationDbContext dbContext,CancellationToken cancellationToken)
+        public Task<CourseModule?> OnCourseModuleAdded([EventMessage] Guid id, [FromServices] ApplicationDbContext dbContext,CancellationToken cancellationToken)
         {
           return dbContext.CourseModules.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         }
